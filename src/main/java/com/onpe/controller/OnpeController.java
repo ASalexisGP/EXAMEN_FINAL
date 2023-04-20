@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+import com.onpe.service.IGeneralPresidencialService;
 import com.onpe.service.IGrupoNumeroService;
 
 @Configuration
@@ -60,5 +61,17 @@ public String listar (Model modelo, @PathVariable ("id")String id) {
 modelo.addAttribute("actas", iGrupoNumeroService.getGrupoVotacion(id));
 return "actas_info";
 }
-
+@Autowired
+private IGeneralPresidencialService iGeneralPresidencialService;
+@RequestMapping ("/GeneralP")
+public String presidencial(Model modelo) {
+	modelo.addAttribute("presidencial", iGeneralPresidencialService.getpresidencial());
+	return "GeneralPresidencialFinal";
 }
+}
+
+
+
+
+
+
