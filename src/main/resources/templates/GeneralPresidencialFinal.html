@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-xs-12 col-md-9" id="impreso">
                         <div class="contenido-interna">
-                        <tr th:each="GeneralPresidencialFinal : ${presidencial}">
+                        <tr th:each="presidencial: ${presidenciales}">
                             <div class="titulos col-xs-12">
                                 <div class="col-xs-11">
                                     <h3> <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true" style="font-size:19px"></span> SEGUNDA ELECCIÓN PRESIDENCIAL 2016: RESULTADOS PRESIDENCIALES</h3>
@@ -111,14 +111,14 @@
                                             </tr>
 																																				<tr>
 														<td><img width="40px" height="40px" src="images/simbolo_pkk.jpg" class="spaceimg"><img width="40px" height="40px" src="images/pkk.jpg" class="spaceimg">PERUANOS POR EL KAMBIO </td>
-																													<td th:text="${resumen.Numerop1}"></td>
-																														<td th:text="${resumen.TotalP1}"> </td> 
+																													<td th:text="${presidencial.Numerop1}"></td>
+																														<td th:text="${presidencial.TotalP1}"> </td> 
 																												
 													</tr>
 																																																<tr>
 														<td><img width="40px" height="40px" src="images/simbolo_keyko.jpg" class="spaceimg"><img width="40px" height="40px" src="images/keyko.jpg" class="spaceimg">FUERZA POPULAR </td>
-																													<td th:text="${resumen.NumeroP2}"></td>
-																													<td th:text="${resumen.TotalP2}"> </td>  
+																													<td th:text="${presidencial.NumeroP2}"></td>
+																													<td th:text="${presidencial.TotalP2}"> </td>  
 																												
 													</tr>
 																							                                        </tbody>
@@ -182,10 +182,10 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td th:text="${resumen.ElectoresHabiles}"></td>
-                                                <td th:text="${resumen.NumeroAsistentes}"></td>
-												<td th:text="${resumen.TotalAsistentes}"></td>
-                                                <td th:text="${resumen.TotalAusentes}"></td>
+                                                <td th:text="${presidencial.ElectoresHabiles}"></td>
+                                                <td th:text="${presidencial.NumeroAsistentes}"></td>
+												<td th:text="${presidencial.TotalAsistentes}"></td>
+                                                <td th:text="${presidencial.TotalAusentes}"></td>
                                             </tr>
                                             
                                         </tbody>

@@ -65,7 +65,7 @@ return "actas_info";
 private IGeneralPresidencialService iGeneralPresidencialService;
 @RequestMapping ("/GeneralP")
 public String presidencial(Model modelo) {
-	modelo.addAttribute("presidencial", iGeneralPresidencialService.getpresidencial());
+	modelo.addAttribute("presidenciales", iGeneralPresidencialService.getpresidencial());
 	return "GeneralPresidencialFinal";
 }
 }

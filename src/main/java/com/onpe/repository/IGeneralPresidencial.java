@@ -8,7 +8,7 @@ import com.onpe.model.GeneralPresidencial;
 
 @Repository
 public interface IGeneralPresidencial extends JpaRepository<GeneralPresidencial, Integer> {
-@Query (value="{call  sp_getResumen_GomeroPiscoAS}", nativeQuery =true )
+@Query (value="{call sp_getResumen_GomeroPiscoAS}", nativeQuery =true )
 GeneralPresidencial getpresidencial();
 
 
